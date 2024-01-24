@@ -4,9 +4,10 @@ import (
 	"log"
 	"os"
 
-	"github.com/NikSchaefer/go-fiber/database"
-	"github.com/NikSchaefer/go-fiber/router"
+	"seangjr/kehilah/database"
+	"seangjr/kehilah/router"
 
+	"github.com/gofiber/contrib/swagger"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/joho/godotenv"
@@ -19,7 +20,7 @@ func getenv(key, fallback string) string {
 	}
 	return value
 }
-
+// @title Swagger Example API
 func main() {
 	godotenv.Load()
 	app := fiber.New()
@@ -27,6 +28,12 @@ func main() {
 		AllowOrigins: "*", // comma string format e.g. "localhost, nikschaefer.tech"
 		AllowHeaders: "Origin, Content-Type, Accept",
 	}))
+	cfg := swagger.Config{
+		BasePath: "/api/v1",
+		FilePath: "./docs/swagger.json",
+		Path: "docs",
+	}
+	app.Use(swagger.New(cfg))
 
 	database.ConnectDB()
 

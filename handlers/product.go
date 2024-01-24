@@ -3,8 +3,8 @@ package handlers
 import (
 	"strconv"
 
-	"github.com/NikSchaefer/go-fiber/database"
-	"github.com/NikSchaefer/go-fiber/model"
+	"seangjr/kehilah/database"
+	"seangjr/kehilah/model"
 
 	"github.com/gofiber/fiber/v2"
 	"gorm.io/gorm"

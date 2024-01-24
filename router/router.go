@@ -1,8 +1,9 @@
 package router
 
 import (
-	"github.com/NikSchaefer/go-fiber/handlers"
-	"github.com/NikSchaefer/go-fiber/middleware"
+	"seangjr/kehilah/handlers"
+	"seangjr/kehilah/middleware"
+
 	"github.com/gofiber/fiber/v2"
 )
 

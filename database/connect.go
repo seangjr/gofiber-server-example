@@ -4,7 +4,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/NikSchaefer/go-fiber/model"
+	"seangjr/kehilah/model"
+
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

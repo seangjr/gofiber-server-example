@@ -3,8 +3,9 @@ package handlers
 import (
 	"time"
 
-	"github.com/NikSchaefer/go-fiber/database"
-	"github.com/NikSchaefer/go-fiber/model"
+	"seangjr/kehilah/database"
+	"seangjr/kehilah/model"
+
 	"github.com/badoux/checkmail"
 	"github.com/gofiber/fiber/v2"
 	guuid "github.com/google/uuid"

@@ -1,8 +1,9 @@
 package middleware
 
 import (
-	"github.com/NikSchaefer/go-fiber/handlers"
-	"github.com/NikSchaefer/go-fiber/model"
+	"seangjr/kehilah/handlers"
+	"seangjr/kehilah/model"
+
 	"github.com/gofiber/fiber/v2"
 )
 
