@@ -9,13 +9,13 @@ To quickly get started with the Go-Fiber Boilerplate, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/NikSchaefer/go-fiber
+git clone https://github.com/seangjr/gofiber-server-example
 ```
 
 2. Install Dependencies
 
 ```bash
-cd go-fiber-boilerplate
+cd gofiber-server-example
 go mod tidy
 ```
 
