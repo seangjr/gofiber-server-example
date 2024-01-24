@@ -153,7 +153,7 @@ func CreateUser(c *fiber.Ctx) error {
 	}
 	c.Cookie(&fiber.Cookie{
 		Name:     "sessionid",
-		Expires:  time.Now().Add(5 * 24 * time.Hour),
+		Expires:  time.Now().Add(5 * 24 * time.Hour), // expires in 5 days
 		Value:    session.Sessionid.String(),
 		HTTPOnly: true,
 	})

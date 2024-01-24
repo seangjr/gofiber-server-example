@@ -1,6 +1,6 @@
 # 👋 Go-Fiber Boilerplate
 
-Golang Rest API boilerplate built with GORM, Go-Fiber, and a PostgreSQL database. Running in a docker container with Hot Reload.
+Golang Rest API boilerplate built with GORM, Go-Fiber, and a PostgreSQL database. Running in a docker container with Hot Reload or using `air`.
 
 ## Quickstart 🚀
 
