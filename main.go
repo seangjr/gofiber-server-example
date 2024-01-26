@@ -13,6 +13,8 @@ import (
 	"github.com/joho/godotenv"
 )
 
+const BasePath = "/api/v1"
+
 func getenv(key, fallback string) string {
 	value := os.Getenv(key)
 	if len(value) == 0 {
@@ -20,7 +22,7 @@ func getenv(key, fallback string) string {
 	}
 	return value
 }
-// @title Swagger Example API
+
 func main() {
 	godotenv.Load()
 	app := fiber.New()

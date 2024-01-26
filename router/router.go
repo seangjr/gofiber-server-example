@@ -8,6 +8,7 @@ import (
 )
 
 func Initalize(router *fiber.App) {
+	router.Group("/api/v1")
 
 	router.Use(middleware.Security)
 

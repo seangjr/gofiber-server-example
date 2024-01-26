@@ -25,3 +25,20 @@ func Authenticated(c *fiber.Ctx) error {
 	c.Locals("user", user)
 	return c.Next()
 }
+
+func IsAdmin(c *fiber.Ctx) error {
+	user, err := handlers.GetUser(c.Locals("user").(*model.User).ID)
+	if err != nil {
+		return c.JSON(fiber.Map{
+			"code":    404,
+			"message": "404: not found",
+		})
+	}
+	if user.Role != "admin" {
+		return c.JSON(fiber.Map{
+			"code":    401,
+			"message": "401: unauthorized",
+		})
+	}
+	return c.Next()
+}

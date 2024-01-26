@@ -1,7 +1,84 @@
 {
   "swagger": "2.0",
   "info": {
-    "contact": {}
+    "title": "Kehilah API",
+    "description": "API callbacks for Kehilah app",
+    "version": "0.0.1",
+    "contact": {
+      "name": "Sean",
+      "email": "sean@relampagos.org"
+    }
   },
-  "paths": {}
+  "servers": [
+    {
+      "url": "http://localhost:8000",
+      "description": "Local server"
+    },
+    {
+      "url": "https://kehilah-api.herokuapp.com/v1",
+      "description": "Production server"
+    },
+    {
+      "url": "https://kehilah-api-staging.herokuapp.com",
+      "description": "Staging server"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "post": {
+        "summary": "Create a user",
+        "description": "Create a user",
+        "parameters": [
+          {
+            "name": "User",
+            "in": "body",
+            "description": "User object",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "type": "string",
+                  "example": "seangjr"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "abcd1234*"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "sean@relampagos.org"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User created successfully and signed in",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "integer",
+                  "example": 200
+                },
+                "message": {
+                  "type": "string",
+                  "example": "success"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid JSON"
+          }
+        }
+      }
+    }
+  }
 }
